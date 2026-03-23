@@ -125,15 +125,35 @@ header p {
   display: none;
 }
 
-.image-placeholder {
+.image-container {
+  position: relative;
   height: 200px;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 4px;
+}
+
+.image-container img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  pointer-events: none;
 }
 
 .style-card h3 {
