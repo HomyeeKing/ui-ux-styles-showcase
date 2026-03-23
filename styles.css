@@ -114,11 +114,34 @@ header p {
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
 }
 
 .style-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-shadow-hover);
+}
+
+.style-card {
+  cursor: pointer;
+}
+
+.style-card::after {
+  content: '点击应用此风格';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(102, 126, 234, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.style-card:hover::after {
+  opacity: 1;
 }
 
 .style-card.hidden {
