@@ -52,32 +52,100 @@ function initStyleCards() {
   });
 }
 
+// Style name to class mapping
+const styleMapping = {
+  'Minimalism': 'style-minimalism',
+  'Neumorphism': 'style-neumorphism',
+  'Glassmorphism': 'style-glassmorphism',
+  'Brutalism': 'style-brutalism',
+  '3D': 'style-3d',
+  'Vibrant': 'style-vibrant',
+  'Dark': 'style-dark',
+  'Accessible': 'style-accessible',
+  'Claymorphism': 'style-claymorphism',
+  'Aurora': 'style-aurora',
+  'Retro': 'style-retro',
+  'Flat': 'style-flat',
+  'Skeuomorphism': 'style-skeuomorphism',
+  'Liquid': 'style-liquid-glass',
+  'Motion': 'style-motion',
+  'Micro': 'style-micro',
+  'Inclusive': 'style-inclusive',
+  'Zero': 'style-zero',
+  'Soft': 'style-soft',
+  'Neubrutalism': 'style-neubrutalism',
+  'Bento': 'style-bento',
+  'Y2K': 'style-y2k',
+  'Cyberpunk': 'style-cyberpunk',
+  'Organic': 'style-organic',
+  'AI-Native': 'style-ai',
+  'Memphis': 'style-memphis',
+  'Vaporwave': 'style-vaporwave',
+  'Dimensional': 'style-dimensional',
+  'Exaggerated': 'style-exaggerated',
+  'Kinetic': 'style-kinetic',
+  'Parallax': 'style-parallax',
+  'Swiss': 'style-swiss',
+  'HUD': 'style-hud',
+  'Pixel': 'style-pixel',
+  'Spatial': 'style-spatial',
+  'E-Ink': 'style-eink',
+  'Gen Z': 'style-genz',
+  'Biomimetic': 'style-biomimetic',
+  'Anti-Polish': 'style-anti',
+  'Tactile': 'style-tactile',
+  'Nature': 'style-nature',
+  'Interactive': 'style-interactive',
+  'Voice': 'style-voice',
+  'Gradient Mesh': 'style-gradient',
+  'Editorial': 'style-editorial',
+  'Chromatic': 'style-chromatic',
+  'Vintage': 'style-vintage',
+  'Hero': 'style-hero',
+  'Conversion': 'style-conversion',
+  'Feature': 'style-feature',
+  'Minimal & Direct': 'style-minimal-direct',
+  'Social': 'style-social',
+  'Interactive Product': 'style-interactive-product',
+  'Trust': 'style-trust',
+  'Storytelling': 'style-storytelling',
+  'Data-Dense': 'style-data',
+  'Heat': 'style-heat',
+  'Executive': 'style-executive',
+  'Real-Time': 'style-realtime',
+  'Drill-Down': 'style-drill',
+  'Comparative': 'style-comparative',
+  'Predictive': 'style-predictive',
+  'User Behavior': 'style-behavior',
+  'Financial': 'style-financial',
+  'Sales': 'style-sales'
+};
+
 // Apply style by adding/removing CSS class
 function applyStyle(styleName) {
   var body = document.body;
   
   // Remove all style classes
-  body.classList.remove('style-minimalism', 'style-dark', 'style-brutalism', 'style-cyberpunk');
+  var allClasses = Object.values(styleMapping);
+  body.classList.remove(...allClasses);
   
-  // Add appropriate class based on style name
-  if (styleName.indexOf('Minimalism') !== -1) {
-    body.classList.add('style-minimalism');
-    showNotification('已切换至: 极简风格');
+  // Find matching style
+  var matchedClass = null;
+  var matchedName = null;
+  
+  for (var key in styleMapping) {
+    if (styleName.indexOf(key) !== -1) {
+      matchedClass = styleMapping[key];
+      matchedName = key;
+      break;
+    }
   }
-  else if (styleName.indexOf('Dark') !== -1) {
-    body.classList.add('style-dark');
-    showNotification('已切换至: 深色模式');
-  }
-  else if (styleName.indexOf('Brutalism') !== -1) {
-    body.classList.add('style-brutalism');
-    showNotification('已切换至: 粗野主义');
-  }
-  else if (styleName.indexOf('Cyberpunk') !== -1) {
-    body.classList.add('style-cyberpunk');
-    showNotification('已切换至: 赛博朋克');
-  }
-  else {
-    showNotification('该风格演示开发中...');
+  
+  if (matchedClass) {
+    body.classList.add(matchedClass);
+    showNotification('已切换至: ' + matchedName);
+  } else {
+    showNotification('该风格演示开发中: ' + styleName);
   }
 }
 
