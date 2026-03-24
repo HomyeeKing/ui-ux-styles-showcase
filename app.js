@@ -1,139 +1,170 @@
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('App.js loaded');
+  console.log('App.js loaded successfully');
   
-  // Filter functionality
+  initFilters();
+  initStyleCards();
+});
+
+// Initialize filter tags
+function initFilters() {
   const tags = document.querySelectorAll('.tag');
   const cards = document.querySelectorAll('.style-card');
   
-  console.log('Found cards:', cards.length);
-
-  // Filter tags
-  tags.forEach(tag => {
+  tags.forEach(function(tag) {
     tag.addEventListener('click', function() {
-      tags.forEach(t => t.classList.remove('active'));
+      // Update active state
+      tags.forEach(function(t) { t.classList.remove('active'); });
       tag.classList.add('active');
 
       const category = tag.dataset.category;
       
-      cards.forEach(card => {
+      cards.forEach(function(card) {
         if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
-          card.style.opacity = '0';
-          setTimeout(() => {
+          card.style.display = 'block';
+          setTimeout(function() {
             card.style.opacity = '1';
-          }, 50);
+          }, 10);
         } else {
-          card.classList.add('hidden');
+          card.style.opacity = '0';
+          setTimeout(function() {
+            card.style.display = 'none';
+          }, 300);
         }
       });
     });
   });
+}
 
-  // Style card click - apply theme
+// Initialize style card clicks
+function initStyleCards() {
+  const cards = document.querySelectorAll('.style-card');
+  console.log('Found', cards.length, 'cards');
+  
   cards.forEach(function(card, index) {
     card.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
+      console.log('Card', index, 'clicked');
       
       const h3 = card.querySelector('h3');
-      const styleName = h3 ? h3.textContent.trim() : '';
+      if (!h3) {
+        console.log('No h3 found');
+        return;
+      }
       
-      console.log('Card clicked:', index, styleName);
+      const styleName = h3.textContent.trim();
+      console.log('Style name:', styleName);
+      
       applyStyle(styleName);
     });
   });
-});
+}
 
-// Style configurations
-const styleConfigs = {
-  'Minimalism': {
-    '--bg-primary': '#ffffff',
-    '--bg-secondary': '#f8f9fa',
-    '--text-primary': '#212529',
-    '--card-bg': '#ffffff',
-    '--card-shadow': '0 1px 3px rgba(0,0,0,0.1)',
-    '--border-color': '#dee2e6'
-  },
-  'Dark Mode': {
-    '--bg-primary': '#0a0a0f',
-    '--bg-secondary': '#161b22',
-    '--text-primary': '#e4e4e7',
-    '--card-bg': '#1a1a2e',
-    '--card-shadow': '0 4px 6px rgba(0,0,0,0.3)',
-    '--border-color': '#2d3748'
-  }
-};
-
-// Apply style
+// Apply style directly to elements
 function applyStyle(styleName) {
   console.log('Applying style:', styleName);
   
-  const root = document.documentElement;
-  let matchedStyle = null;
+  const body = document.body;
+  const header = document.querySelector('header');
+  const cards = document.querySelectorAll('.style-card');
   
-  // Find matching style
-  for (const [key, config] of Object.entries(styleConfigs)) {
-    if (styleName.includes(key)) {
-      matchedStyle = config;
-      break;
+  // Minimalism style
+  if (styleName.indexOf('Minimalism') !== -1) {
+    console.log('Applying Minimalism');
+    body.style.backgroundColor = '#ffffff';
+    body.style.color = '#212529';
+    
+    if (header) {
+      header.style.background = '#f8f9fa';
+      header.style.color = '#212529';
     }
+    
+    cards.forEach(function(card) {
+      card.style.backgroundColor = '#ffffff';
+      card.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+      card.style.border = '1px solid #dee2e6';
+    });
+    
+    showNotification('已切换至: 极简风格');
   }
-  
-  if (matchedStyle) {
-    // Apply CSS variables
-    for (const [prop, value] of Object.entries(matchedStyle)) {
-      root.style.setProperty(prop, value);
+  // Dark Mode style
+  else if (styleName.indexOf('Dark') !== -1) {
+    console.log('Applying Dark Mode');
+    body.style.backgroundColor = '#0a0a0f';
+    body.style.color = '#e4e4e7';
+    
+    if (header) {
+      header.style.background = '#161b22';
+      header.style.color = '#e4e4e7';
     }
-    showNotification('风格已切换: ' + styleName);
-  } else {
-    showNotification('该风格演示开发中: ' + styleName);
+    
+    cards.forEach(function(card) {
+      card.style.backgroundColor = '#1a1a2e';
+      card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+      card.style.border = '1px solid #2d3748';
+    });
+    
+    showNotification('已切换至: 深色模式');
+  }
+  // Brutalism style
+  else if (styleName.indexOf('Brutalism') !== -1) {
+    console.log('Applying Brutalism');
+    body.style.backgroundColor = '#ff6b6b';
+    body.style.color = '#000000';
+    
+    if (header) {
+      header.style.background = '#ff6b6b';
+      header.style.color = '#000000';
+    }
+    
+    cards.forEach(function(card) {
+      card.style.backgroundColor = '#ffffff';
+      card.style.boxShadow = '8px 8px 0 #000000';
+      card.style.border = '3px solid #000000';
+    });
+    
+    showNotification('已切换至: 粗野主义');
+  }
+  // Cyberpunk style
+  else if (styleName.indexOf('Cyberpunk') !== -1) {
+    console.log('Applying Cyberpunk');
+    body.style.backgroundColor = '#0a0a0f';
+    body.style.color = '#00ffff';
+    
+    if (header) {
+      header.style.background = 'linear-gradient(135deg, #ff00cc 0%, #333399 100%)';
+      header.style.color = '#ffffff';
+    }
+    
+    cards.forEach(function(card) {
+      card.style.backgroundColor = '#1a1a2e';
+      card.style.boxShadow = '0 0 20px rgba(0,255,255,0.3)';
+      card.style.border = '1px solid #00ffff';
+    });
+    
+    showNotification('已切换至: 赛博朋克');
+  }
+  else {
+    showNotification('该风格演示开发中...');
   }
 }
 
 // Show notification
 function showNotification(message) {
-  // Remove existing notification
-  const existing = document.querySelector('.style-notification');
+  var existing = document.querySelector('.style-notification');
   if (existing) existing.remove();
   
-  // Create new notification
-  const notification = document.createElement('div');
+  var notification = document.createElement('div');
   notification.className = 'style-notification';
   notification.textContent = message;
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--card-bg, #fff);
-    color: var(--text-primary, #333);
-    padding: 15px 25px;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow, 0 4px 6px rgba(0,0,0,0.1));
-    z-index: 10000;
-    font-family: sans-serif;
-    font-size: 14px;
-    animation: slideIn 0.3s ease;
-  `;
+  notification.style.cssText = 'position:fixed;top:20px;right:20px;background:#333;color:#fff;padding:15px 25px;border-radius:8px;z-index:10000;font-family:sans-serif;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
   
   document.body.appendChild(notification);
   
-  setTimeout(() => {
-    notification.style.animation = 'slideOut 0.3s ease';
-    setTimeout(() => notification.remove(), 300);
+  setTimeout(function() {
+    notification.style.opacity = '0';
+    notification.style.transition = 'opacity 0.3s';
+    setTimeout(function() {
+      notification.remove();
+    }, 300);
   }, 2000);
 }
-
-// Add animation styles
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
-  @keyframes slideOut {
-    from { transform: translateX(0); opacity: 1; }
-    to { transform: translateX(100%); opacity: 0; }
-  }
-`;
-document.head.appendChild(style);
