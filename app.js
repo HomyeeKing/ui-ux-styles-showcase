@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tags = document.querySelectorAll('.tag');
   const cards = document.querySelectorAll('.style-card');
-  const body = document.body;
 
   // Filter tags
   tags.forEach(tag => {
@@ -35,88 +34,75 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Apply different styles based on selection
+// Simple style configurations
+const simpleStyles = {
+  // 极简风格 - 白色背景，细边框
+  'Minimalism': {
+    bg: '#ffffff',
+    header: '#f8f9fa',
+    text: '#212529',
+    card: '#ffffff',
+    shadow: '0 1px 3px rgba(0,0,0,0.1)',
+    border: '1px solid #dee2e6'
+  },
+  // 深色模式 - 深蓝黑背景
+  'Dark Mode': {
+    bg: '#0a0a0f',
+    header: '#161b22',
+    text: '#e4e4e7',
+    card: '#1a1a2e',
+    shadow: '0 4px 6px rgba(0,0,0,0.3)',
+    border: '1px solid #2d3748'
+  }
+};
+
+// Apply style
 function applyStyle(styleName) {
   const body = document.body;
+  const header = document.querySelector('header');
+  const cards = document.querySelectorAll('.style-card');
   
-  // Remove all previous style classes
-  body.className = '';
-  
-  // Apply style based on name
-  if (styleName.includes('Dark')) {
-    body.style.setProperty('--bg-primary', '#0a0a0f');
-    body.style.setProperty('--bg-secondary', '#1a1a2e');
-    body.style.setProperty('--text-primary', '#e4e4e7');
-    body.style.setProperty('--card-bg', '#16213e');
-  } else if (styleName.includes('Glass')) {
-    body.style.setProperty('--bg-primary', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)');
-    body.style.setProperty('--card-bg', 'rgba(255,255,255,0.1)');
-    body.style.setProperty('--card-shadow', '0 8px 32px rgba(0,0,0,0.1)');
-  } else if (styleName.includes('Neumorphism')) {
-    body.style.setProperty('--bg-primary', '#e0e5ec');
-    body.style.setProperty('--card-bg', '#e0e5ec');
-    body.style.setProperty('--card-shadow', '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)');
-  } else if (styleName.includes('Brutalism')) {
-    body.style.setProperty('--bg-primary', '#ff6b6b');
-    body.style.setProperty('--card-bg', '#ffffff');
-    body.style.setProperty('--card-shadow', '8px 8px 0 #000');
-    body.style.setProperty('--text-primary', '#000');
-  } else if (styleName.includes('Cyberpunk')) {
-    body.style.setProperty('--bg-primary', '#0a0a0f');
-    body.style.setProperty('--bg-header', 'linear-gradient(135deg, #ff00cc 0%, #333399 100%)');
-    body.style.setProperty('--text-primary', '#00ffff');
-    body.style.setProperty('--card-bg', '#1a1a2e');
-  } else if (styleName.includes('Aurora')) {
-    body.style.setProperty('--bg-primary', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)');
-    body.style.setProperty('--card-bg', 'rgba(255,255,255,0.9)');
-  } else {
-    // Reset to default
-    body.style.removeProperty('--bg-primary');
-    body.style.removeProperty('--bg-secondary');
-    body.style.removeProperty('--bg-header');
-    body.style.removeProperty('--text-primary');
-    body.style.removeProperty('--card-bg');
-    body.style.removeProperty('--card-shadow');
+  // Check if it's a supported simple style
+  let style = null;
+  if (styleName.includes('Minimalism')) {
+    style = simpleStyles['Minimalism'];
+  } else if (styleName.includes('Dark')) {
+    style = simpleStyles['Dark Mode'];
   }
   
-  // Show notification
-  showNotification(`已切换至: ${styleName}`);
+  if (style) {
+    // Apply to body
+    body.style.background = style.bg;
+    body.style.color = style.text;
+    
+    // Apply to header
+    if (header) {
+      header.style.background = style.header;
+      header.style.color = style.text;
+    }
+    
+    // Apply to cards
+    cards.forEach(card => {
+      card.style.background = style.card;
+      card.style.boxShadow = style.shadow;
+      card.style.border = style.border;
+    });
+    
+    showNotification(`已切换至: ${styleName}`);
+  } else {
+    showNotification('该风格演示开发中...');
+  }
 }
 
 // Show notification
 function showNotification(message) {
+  const existing = document.querySelector('.notification');
+  if (existing) existing.remove();
+  
   const notification = document.createElement('div');
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--card-bg);
-    color: var(--text-primary);
-    padding: 15px 25px;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    z-index: 1000;
-    animation: slideIn 0.3s ease;
-  `;
+  notification.className = 'notification';
   notification.textContent = message;
   document.body.appendChild(notification);
   
-  setTimeout(() => {
-    notification.style.animation = 'slideOut 0.3s ease';
-    setTimeout(() => notification.remove(), 300);
-  }, 2000);
+  setTimeout(() => notification.remove(), 2000);
 }
-
-// Add animation styles
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
-  @keyframes slideOut {
-    from { transform: translateX(0); opacity: 1; }
-    to { transform: translateX(100%); opacity: 0; }
-  }
-`;
-document.head.appendChild(style);
