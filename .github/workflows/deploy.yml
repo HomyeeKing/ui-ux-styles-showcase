@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master, main]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +23,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Verify files exist
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo ""
+          echo "Checking index.html..."
+          test -f index.html && echo "index.html exists" || echo "index.html NOT FOUND"
+          echo ""
+          echo "Checking for style definitions in index.html..."
+          grep -c "body.style-minimalism" index.html || echo "Style definitions not found"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
