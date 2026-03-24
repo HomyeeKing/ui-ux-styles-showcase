@@ -691,4 +691,584 @@ body.style-editorial {
   font-family: 'Georgia', serif;
 }
 
-body.style
+body.style-editorial header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+body.style-editorial header h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+body.style-editorial header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+body.style-editorial .filter-tags {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.style-editorial .tag {
+  background: transparent;
+  color: #666;
+  border: none;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+body.style-editorial .tag:hover,
+body.style-editorial .tag.active {
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+body.style-editorial .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body.style-editorial .style-card {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.style-editorial .style-card:hover {
+  transform: none;
+}
+
+body.style-editorial .image-container {
+  margin-bottom: 30px;
+}
+
+body.style-editorial .style-card h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+body.style-editorial .style-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   8. 3D & HYPERREALISM
+   Depth, perspective, floating elements
+   ============================================ */
+body.style-3d {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2d3748;
+  font-family: 'Arial', sans-serif;
+  perspective: 1000px;
+}
+
+body.style-3d header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px;
+  transform: rotateX(5deg);
+  transform-origin: top;
+  box-shadow: 0 50px 100px rgba(102,126,234,0.3);
+}
+
+body.style-3d header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+body.style-3d header p {
+  color: rgba(255,255,255,0.9);
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+body.style-3d .filter-tags {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  perspective: 500px;
+}
+
+body.style-3d .tag {
+  background: #fff;
+  color: #667eea;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateZ(0);
+  transition: all 0.3s;
+}
+
+body.style-3d .tag:hover,
+body.style-3d .tag.active {
+  transform: translateZ(30px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+body.style-3d .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  transform-style: preserve-3d;
+}
+
+body.style-3d .style-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.1),
+    0 0 0 1px rgba(0,0,0,0.05);
+  transform: translateZ(0) rotateX(5deg);
+  transition: all 0.4s;
+}
+
+body.style-3d .style-card:hover {
+  transform: translateZ(50px) rotateX(0) scale(1.05);
+  box-shadow: 
+    0 40px 80px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(0,0,0,0.05);
+}
+
+body.style-3d .image-container {
+  border-radius: 20px 20px 0 0;
+  transform: translateZ(20px);
+}
+
+body.style-3d .style-card h3 {
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  transform: translateZ(30px);
+}
+
+body.style-3d .style-card p {
+  padding: 0 20px 20px;
+  color: #718096;
+  transform: translateZ(25px);
+}
+
+/* ============================================
+   9. DARK MODE OLED
+   Pure black, OLED optimized, neon accents
+   ============================================ */
+body.style-dark {
+  background: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.style-dark header {
+  background: #000;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 60px;
+}
+
+body.style-dark header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #fff 0%, #888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.style-dark header p {
+  color: #666;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+body.style-dark .filter-tags {
+  display: flex;
+  gap: 15px;
+  padding: 30px 60px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+body.style-dark .tag {
+  background: #111;
+  color: #666;
+  border: 1px solid #222;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+body.style-dark .tag:hover,
+body.style-dark .tag.active {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+body.style-dark .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+body.style-dark .style-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+body.style-dark .style-card:hover {
+  border-color: #444;
+  transform: translateY(-5px);
+}
+
+body.style-dark .image-container {
+  border-bottom: 1px solid #222;
+}
+
+body.style-dark .style-card h3 {
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+body.style-dark .style-card p {
+  padding: 0 20px 20px;
+  color: #666;
+}
+
+/* ============================================
+   10. Y2K / GEN Z
+   Gradient text, playful, chaotic
+   ============================================ */
+body.style-y2k {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #48dbfb 50%, #ff9ff3 75%, #54a0ff 100%);
+  color: #000;
+  font-family: 'Comic Sans MS', cursive;
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.style-y2k header {
+  background: rgba(255,255,255,0.9);
+  padding: 60px;
+  margin: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
+}
+
+body.style-y2k header h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+body.style-y2k header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+body.style-y2k .filter-tags {
+  display: flex;
+  gap: 20px;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+
+body.style-y2k .tag {
+  background: #fff;
+  color: #ff6b6b;
+  border: 3px solid #000;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0 #000;
+  transform: rotate(-3deg);
+  transition: all 0.2s;
+}
+
+body.style-y2k .tag:hover,
+body.style-y2k .tag.active {
+  transform: rotate(3deg) scale(1.1);
+  box-shadow: -4px -4px 0 #000;
+}
+
+body.style-y2k .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 40px;
+}
+
+body.style-y2k .style-card {
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 #000;
+  transform: rotate(-2deg);
+  transition: all 0.3s;
+}
+
+body.style-y2k .style-card:hover {
+  transform: rotate(2deg) scale(1.05);
+  box-shadow: -8px -8px 0 #000;
+}
+
+body.style-y2k .image-container {
+  border-bottom: 4px solid #000;
+  border-radius: 16px 16px 0 0;
+}
+
+body.style-y2k .style-card h3 {
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+body.style-y2k .style-card p {
+  padding: 0 20px 20px;
+  color: #666;
+}
+
+/* ============================================
+   11. PIXEL ART
+   8-bit, retro gaming, crisp edges
+   ============================================ */
+body.style-pixel {
+  background: #2d2d2d;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  image-rendering: pixelated;
+}
+
+body.style-pixel header {
+  background: #ff6b6b;
+  padding: 40px;
+  border-bottom: 8px solid #000;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.2);
+}
+
+body.style-pixel header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 4px 4px 0 #000;
+  image-rendering: pixelated;
+}
+
+body.style-pixel header p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+body.style-pixel .filter-tags {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #3d3d3d;
+  border-bottom: 4px solid #000;
+}
+
+body.style-pixel .tag {
+  background: #4ecdc4;
+  color: #000;
+  border: 4px solid #000;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 #000;
+  image-rendering: pixelated;
+}
+
+body.style-pixel .tag:hover,
+body.style-pixel .tag.active {
+  background: #ffe66d;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+body.style-pixel .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+body.style-pixel .style-card {
+  background: #3d3d3d;
+  border: 4px solid #000;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #000;
+}
+
+body.style-pixel .style-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+body.style-pixel .image-container {
+  border-bottom: 4px solid #000;
+  image-rendering: pixelated;
+}
+
+body.style-pixel .style-card h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 0 #000;
+}
+
+body.style-pixel .style-card p {
+  padding: 0 15px 15px;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   12. BENTO GRID
+   Japanese lunchbox style, organized chaos
+   ============================================ */
+body.style-bento {
+  background: #f5f5f5;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.style-bento header {
+  background: #fff;
+  padding: 60px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.style-bento header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+body.style-bento header p {
+  color: #666;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+body.style-bento .filter-tags {
+  display: flex;
+  gap: 10px;
+  padding: 20px 60px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.style-bento .tag {
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+body.style-bento .tag:hover,
+body.style-bento .tag.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body.style-bento .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body.style-bento .style-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body.style-bento .style-card:nth-child(3n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+body.style-bento .style-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+body.style-bento .image-container {
+  flex: 1;
+  min-height: 100px;
+}
+
+body.style-bento .style-card h3 {
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+body.style-bento .style-card p {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 0.8rem;
+}
