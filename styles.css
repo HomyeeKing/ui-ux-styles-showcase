@@ -192,122 +192,89 @@ header p {
 }
 
 /* Style Classes for Theme Switching */
-.style-minimalism {
-  --bg-primary: #ffffff !important;
-  --bg-secondary: #f8f9fa !important;
-  --bg-header: #f8f9fa !important;
-  --text-primary: #212529 !important;
-  --text-secondary: #6c757d !important;
-  --card-bg: #ffffff !important;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
-  --border-color: #dee2e6 !important;
+/* When body has class, apply these styles */
+
+/* Minimalism Style */
+body.style-minimalism {
+  background: #ffffff !important;
+  color: #212529 !important;
 }
 
-.style-minimalism header {
+body.style-minimalism header {
   background: #f8f9fa !important;
   color: #212529 !important;
 }
 
-.style-minimalism .style-card {
+body.style-minimalism .style-card {
   background: #ffffff !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
   border: 1px solid #dee2e6 !important;
 }
 
-.style-dark {
-  --bg-primary: #0a0a0f !important;
-  --bg-secondary: #161b22 !important;
-  --bg-header: #161b22 !important;
-  --text-primary: #e4e4e7 !important;
-  --text-secondary: #a1a1aa !important;
-  --card-bg: #1a1a2e !important;
-  --card-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
-  --border-color: #2d3748 !important;
-}
-
-.style-dark body {
+/* Dark Mode Style */
+body.style-dark {
   background: #0a0a0f !important;
   color: #e4e4e7 !important;
 }
 
-.style-dark header {
+body.style-dark header {
   background: #161b22 !important;
   color: #e4e4e7 !important;
 }
 
-.style-dark .style-card {
+body.style-dark .style-card {
   background: #1a1a2e !important;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
   border: 1px solid #2d3748 !important;
 }
 
-.style-dark .style-card h3 {
+body.style-dark .style-card h3 {
   color: #e4e4e7 !important;
 }
 
-.style-dark .style-card p {
+body.style-dark .style-card p {
   color: #a1a1aa !important;
 }
 
-.style-brutalism {
-  --bg-primary: #ff6b6b !important;
-  --bg-secondary: #ffffff !important;
-  --bg-header: #ff6b6b !important;
-  --text-primary: #000000 !important;
-  --text-secondary: #333333 !important;
-  --card-bg: #ffffff !important;
-  --card-shadow: 8px 8px 0 #000000 !important;
-  --border-color: #000000 !important;
-}
-
-.style-brutalism body {
+/* Brutalism Style */
+body.style-brutalism {
   background: #ff6b6b !important;
   color: #000000 !important;
 }
 
-.style-brutalism header {
+body.style-brutalism header {
   background: #ff6b6b !important;
   color: #000000 !important;
 }
 
-.style-brutalism .style-card {
+body.style-brutalism .style-card {
   background: #ffffff !important;
   box-shadow: 8px 8px 0 #000000 !important;
   border: 3px solid #000000 !important;
 }
 
-.style-cyberpunk {
-  --bg-primary: #0a0a0f !important;
-  --bg-secondary: #1a1a2e !important;
-  --bg-header: linear-gradient(135deg, #ff00cc 0%, #333399 100%) !important;
-  --text-primary: #00ffff !important;
-  --text-secondary: #ff00cc !important;
-  --card-bg: #1a1a2e !important;
-  --card-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
-  --border-color: #00ffff !important;
-}
-
-.style-cyberpunk body {
+/* Cyberpunk Style */
+body.style-cyberpunk {
   background: #0a0a0f !important;
   color: #00ffff !important;
 }
 
-.style-cyberpunk header {
+body.style-cyberpunk header {
   background: linear-gradient(135deg, #ff00cc 0%, #333399 100%) !important;
   color: #ffffff !important;
 }
 
-.style-cyberpunk .style-card {
+body.style-cyberpunk .style-card {
   background: #1a1a2e !important;
   box-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
   border: 1px solid #00ffff !important;
 }
 
-.style-cyberpunk .style-card h3 {
+body.style-cyberpunk .style-card h3 {
   color: #00ffff !important;
 }
 
-.style-cyberpunk .style-card p {
+body.style-cyberpunk .style-card p {
   color: #ff00cc !important;
 }
 
