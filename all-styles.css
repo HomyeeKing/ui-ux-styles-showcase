@@ -1,0 +1,274 @@
+/* ============================================
+   UI/UX Pro Max - All 67 Styles
+   Generated for interactive theme switching
+   ============================================ */
+
+/* Base transition for smooth theme switching */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+header, .style-card {
+  transition: all 0.5s ease;
+}
+
+/* ============================================
+   GENERAL STYLES (49)
+   ============================================ */
+
+/* 1. Minimalism & Swiss Style */
+body.style-minimalism {
+  background: #ffffff !important;
+  color: #212529 !important;
+}
+body.style-minimalism header {
+  background: #f8f9fa !important;
+  color: #212529 !important;
+}
+body.style-minimalism .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+/* 2. Neumorphism */
+body.style-neumorphism {
+  background: #e0e5ec !important;
+  color: #2d3748 !important;
+}
+body.style-neumorphism header {
+  background: #e0e5ec !important;
+  box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5) !important;
+}
+body.style-neumorphism .style-card {
+  background: #e0e5ec !important;
+  box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5) !important;
+  border-radius: 20px !important;
+}
+
+/* 3. Glassmorphism */
+body.style-glassmorphism {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+body.style-glassmorphism header {
+  background: rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+body.style-glassmorphism .style-card {
+  background: rgba(255,255,255,0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+/* 4. Brutalism */
+body.style-brutalism {
+  background: #ff6b6b !important;
+  color: #000000 !important;
+}
+body.style-brutalism header {
+  background: #ff6b6b !important;
+  border-bottom: 4px solid #000 !important;
+}
+body.style-brutalism .style-card {
+  background: #ffffff !important;
+  box-shadow: 8px 8px 0 #000000 !important;
+  border: 3px solid #000000 !important;
+}
+
+/* 5. 3D & Hyperrealism */
+body.style-3d {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+  color: #2d3748 !important;
+}
+body.style-3d header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+body.style-3d .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1) !important;
+  transform: perspective(1000px) rotateX(5deg) !important;
+}
+
+/* 6. Vibrant & Block-based */
+body.style-vibrant {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%) !important;
+  color: #2d3436 !important;
+}
+body.style-vibrant header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%) !important;
+}
+body.style-vibrant .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(255,107,107,0.3) !important;
+  border-radius: 0 !important;
+}
+
+/* 7. Dark Mode */
+body.style-dark {
+  background: #0a0a0f !important;
+  color: #e4e4e7 !important;
+}
+body.style-dark header {
+  background: #161b22 !important;
+  color: #e4e4e7 !important;
+}
+body.style-dark .style-card {
+  background: #1a1a2e !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
+  border: 1px solid #2d3748 !important;
+}
+body.style-dark .style-card h3 {
+  color: #e4e4e7 !important;
+}
+body.style-dark .style-card p {
+  color: #a1a1aa !important;
+}
+
+/* 8. Accessible & Ethical */
+body.style-accessible {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+body.style-accessible header {
+  background: #005a9c !important;
+  color: #ffffff !important;
+}
+body.style-accessible .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  border: 2px solid #000000 !important;
+}
+
+/* 9. Claymorphism */
+body.style-claymorphism {
+  background: #f0f3f8 !important;
+  color: #2d3748 !important;
+}
+body.style-claymorphism header {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%) !important;
+}
+body.style-claymorphism .style-card {
+  background: #f8fafc !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 -4px 8px rgba(0,0,0,0.05) !important;
+  border-radius: 30px !important;
+}
+
+/* 10. Aurora UI */
+body.style-aurora {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+  color: #ffffff !important;
+}
+body.style-aurora header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+body.style-aurora .style-card {
+  background: rgba(255,255,255,0.2) !important;
+  box-shadow: 0 8px 32px rgba(102,126,234,0.3) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+/* 11. Retro-Futurism */
+body.style-retro {
+  background: #0c0c1d !important;
+  color: #00ffff !important;
+}
+body.style-retro header {
+  background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%) !important;
+}
+body.style-retro .style-card {
+  background: #1a1a3e !important;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
+  border: 1px solid #00ffff !important;
+}
+
+/* 12. Flat Design */
+body.style-flat {
+  background: #ecf0f1 !important;
+  color: #2c3e50 !important;
+}
+body.style-flat header {
+  background: #3498db !important;
+}
+body.style-flat .style-card {
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 1px solid #bdc3c7 !important;
+}
+
+/* 13. Skeuomorphism */
+body.style-skeuomorphism {
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%) !important;
+  color: #333333 !important;
+}
+body.style-skeuomorphism header {
+  background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%) !important;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.5) !important;
+}
+body.style-skeuomorphism .style-card {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), inset 0 2px 4px rgba(255,255,255,0.5) !important;
+  border: 1px solid #999999 !important;
+}
+
+/* 14. Liquid Glass */
+body.style-liquid-glass {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  color: #ffffff !important;
+}
+body.style-liquid-glass header {
+  background: rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(20px) !important;
+}
+body.style-liquid-glass .style-card {
+  background: rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* 15. Motion-Driven */
+body.style-motion {
+  background: #0f0f23 !important;
+  color: #ffffff !important;
+}
+body.style-motion header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%) !important;
+}
+body.style-motion .style-card {
+  background: #1a1a3e !important;
+  box-shadow: 0 0 30px rgba(255,107,107,0.3) !important;
+}
+
+/* 16. Micro-interactions */
+body.style-micro {
+  background: #f7fafc !important;
+  color: #2d3748 !important;
+}
+body.style-micro header {
+  background: #4299e1 !important;
+}
+body.style-micro .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(66,153,225,0.1) !important;
+  border: 1px solid #bee3f8 !important;
+}
+
+/* 17. Inclusive Design */
+body.style-inclusive {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+body.style-inclusive header {
+  background: #2b6cb0 !important;
+  color: #ffffff !important;
+}
+body.style-inclusive .style-card {
+  background: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  border: 2px solid #2b6cb0 !important;
+}
+
+/* 18. Zero Interface */
+body.style-zero {
