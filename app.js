@@ -215,7 +215,7 @@ function applyStyle(styleName) {
   }
 }
 
-// Show notification
+// Show notification with enhanced animation
 function showNotification(message) {
   var existing = document.querySelector('.style-notification');
   if (existing) existing.remove();
@@ -223,14 +223,86 @@ function showNotification(message) {
   var notification = document.createElement('div');
   notification.className = 'style-notification';
   notification.textContent = message;
-  notification.style.cssText = 'position:fixed;top:20px;right:20px;background:#333;color:#fff;padding:15px 25px;border-radius:8px;z-index:10000;font-family:sans-serif;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:opacity 0.3s;';
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 12px;
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+  `;
   
   document.body.appendChild(notification);
   
+  // Trigger animation
+  requestAnimationFrame(function() {
+    notification.style.transform = 'translateX(0)';
+    notification.style.opacity = '1';
+  });
+  
   setTimeout(function() {
+    notification.style.transform = 'translateX(100px)';
     notification.style.opacity = '0';
     setTimeout(function() {
       notification.remove();
-    }, 300);
-  }, 2000);
+    }, 400);
+  }, 2500);
 }
+
+// Add keyboard navigation
+document.addEventListener('keydown', function(e) {
+  var cards = Array.from(document.querySelectorAll('.style-card:not(.hidden)'));
+  var currentIndex = cards.findIndex(function(card) {
+    return card === document.activeElement;
+  });
+  
+  if (e.key === 'ArrowRight' && currentIndex < cards.length - 1) {
+    cards[currentIndex + 1].focus();
+    e.preventDefault();
+  } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+    cards[currentIndex - 1].focus();
+    e.preventDefault();
+  } else if (e.key === 'Enter' && currentIndex >= 0) {
+    cards[currentIndex].click();
+  }
+});
+
+// Add touch feedback for mobile
+document.querySelectorAll('.style-card, .tag').forEach(function(el) {
+  el.addEventListener('touchstart', function() {
+    this.style.transform = 'scale(0.98)';
+  });
+  el.addEventListener('touchend', function() {
+    this.style.transform = '';
+  });
+});
+
+// Add parallax effect on mouse move
+document.addEventListener('mousemove', function(e) {
+  var cards = document.querySelectorAll('.style-card');
+  var mouseX = e.clientX / window.innerWidth - 0.5;
+  var mouseY = e.clientY / window.innerHeight - 0.5;
+  
+  cards.forEach(function(card, index) {
+    if (card.matches(':hover')) {
+      var intensity = 10;
+      card.style.transform = 'translateY(-8px) scale(1.02) perspective(1000px) rotateY(' + (mouseX * intensity) + 'deg) rotateX(' + (-mouseY * intensity) + 'deg)';
+    }
+  });
+});
+
+// Console easter egg
+console.log('%c UI/UX Pro Max ', 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 8px;');
+console.log('%c 67 Styles Loaded ✨ ', 'color: #667eea; font-size: 14px;');
+console.log('%c Click any card to switch styles! ', 'color: #666; font-size: 12px;');
