@@ -6,315 +6,6 @@
   <title>UI/UX Pro Max - 67 Styles Showcase</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles-advanced.css">
-  <style>
-    /* Inline styles for theme switching - ensure these work */
-    body.style-minimalism {
-      background: #ffffff !important;
-      color: #212529 !important;
-    }
-    body.style-minimalism header {
-      background: #f8f9fa !important;
-      color: #212529 !important;
-    }
-    body.style-minimalism .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
-      border: 1px solid #dee2e6 !important;
-    }
-    
-    body.style-dark {
-      background: #0a0a0f !important;
-      color: #e4e4e7 !important;
-    }
-    body.style-dark header {
-      background: #161b22 !important;
-      color: #e4e4e7 !important;
-    }
-    body.style-dark .style-card {
-      background: #1a1a2e !important;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
-      border: 1px solid #2d3748 !important;
-    }
-    body.style-dark .style-card h3 {
-      color: #e4e4e7 !important;
-    }
-    body.style-dark .style-card p {
-      color: #a1a1aa !important;
-    }
-    
-    body.style-brutalism {
-      background: #ff6b6b !important;
-      color: #000000 !important;
-    }
-    body.style-brutalism header {
-      background: #ff6b6b !important;
-      color: #000000 !important;
-    }
-    body.style-brutalism .style-card {
-      background: #ffffff !important;
-      box-shadow: 8px 8px 0 #000000 !important;
-      border: 3px solid #000000 !important;
-    }
-    
-    body.style-cyberpunk {
-      background: #0a0a0f !important;
-      color: #00ffff !important;
-    }
-    body.style-cyberpunk header {
-      background: linear-gradient(135deg, #ff00cc 0%, #333399 100%) !important;
-      color: #ffffff !important;
-    }
-    body.style-cyberpunk .style-card {
-      background: #1a1a2e !important;
-      box-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
-      border: 1px solid #00ffff !important;
-    }
-    body.style-cyberpunk .style-card h3 {
-      color: #00ffff !important;
-    }
-    body.style-cyberpunk .style-card p {
-      color: #ff00cc !important;
-    }
-    
-    /* Additional Styles */
-    body.style-neumorphism {
-      background: #e0e5ec !important;
-      color: #2d3748 !important;
-    }
-    body.style-neumorphism header {
-      background: #e0e5ec !important;
-      box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5) !important;
-    }
-    body.style-neumorphism .style-card {
-      background: #e0e5ec !important;
-      box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5) !important;
-      border-radius: 20px !important;
-      border: none !important;
-    }
-    
-    body.style-glassmorphism {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-      color: #ffffff !important;
-    }
-    body.style-glassmorphism header {
-      background: rgba(255,255,255,0.1) !important;
-      backdrop-filter: blur(10px) !important;
-    }
-    body.style-glassmorphism .style-card {
-      background: rgba(255,255,255,0.15) !important;
-      backdrop-filter: blur(10px) !important;
-      border: 1px solid rgba(255,255,255,0.2) !important;
-    }
-    
-    body.style-3d {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
-      color: #2d3748 !important;
-    }
-    body.style-3d header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    }
-    body.style-3d .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
-      transform: perspective(1000px) rotateX(2deg) !important;
-    }
-    
-    body.style-vibrant {
-      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%) !important;
-      color: #2d3436 !important;
-    }
-    body.style-vibrant header {
-      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%) !important;
-    }
-    body.style-vibrant .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 10px 20px rgba(255,107,107,0.3) !important;
-      border-radius: 0 !important;
-    }
-    
-    body.style-claymorphism {
-      background: #f0f3f8 !important;
-      color: #2d3748 !important;
-    }
-    body.style-claymorphism header {
-      background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%) !important;
-    }
-    body.style-claymorphism .style-card {
-      background: #f8fafc !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 -4px 8px rgba(0,0,0,0.05) !important;
-      border-radius: 30px !important;
-    }
-    
-    body.style-aurora {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
-      color: #ffffff !important;
-    }
-    body.style-aurora header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    }
-    body.style-aurora .style-card {
-      background: rgba(255,255,255,0.2) !important;
-      backdrop-filter: blur(10px) !important;
-      border: 1px solid rgba(255,255,255,0.3) !important;
-    }
-    
-    body.style-retro {
-      background: #0c0c1d !important;
-      color: #00ffff !important;
-    }
-    body.style-retro header {
-      background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%) !important;
-    }
-    body.style-retro .style-card {
-      background: #1a1a3e !important;
-      box-shadow: 0 0 20px rgba(0,255,255,0.3) !important;
-      border: 1px solid #00ffff !important;
-    }
-    
-    body.style-flat {
-      background: #ecf0f1 !important;
-      color: #2c3e50 !important;
-    }
-    body.style-flat header {
-      background: #3498db !important;
-    }
-    body.style-flat .style-card {
-      background: #ffffff !important;
-      box-shadow: none !important;
-      border: 1px solid #bdc3c7 !important;
-      border-radius: 0 !important;
-    }
-    
-    body.style-y2k {
-      background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%) !important;
-      color: #000000 !important;
-    }
-    body.style-y2k header {
-      background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%) !important;
-    }
-    body.style-y2k .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 10px 30px rgba(255,0,255,0.3) !important;
-    }
-    
-    body.style-memphis {
-      background: #ffffff !important;
-      color: #2d3436 !important;
-    }
-    body.style-memphis header {
-      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 50%, #ff9ff3 100%) !important;
-    }
-    body.style-memphis .style-card {
-      background: #ffffff !important;
-      box-shadow: 8px 8px 0 #2d3436 !important;
-      border: 3px solid #2d3436 !important;
-      border-radius: 0 !important;
-    }
-    
-    body.style-organic {
-      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important;
-      color: #2d3748 !important;
-    }
-    body.style-organic header {
-      background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%) !important;
-    }
-    body.style-organic .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 10px 30px rgba(168,237,234,0.3) !important;
-    }
-    
-    body.style-ai {
-      background: #0f0f1a !important;
-      color: #ffffff !important;
-    }
-    body.style-ai header {
-      background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%) !important;
-    }
-    body.style-ai .style-card {
-      background: #1e1b4b !important;
-      box-shadow: 0 0 30px rgba(124,58,237,0.3) !important;
-      border: 1px solid #7c3aed !important;
-    }
-    
-    body.style-vaporwave {
-      background: #2d1b4e !important;
-      color: #00ffff !important;
-    }
-    body.style-vaporwave header {
-      background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%) !important;
-    }
-    body.style-vaporwave .style-card {
-      background: #1a0b2e !important;
-      box-shadow: 0 0 30px rgba(0,255,255,0.3) !important;
-      border: 1px solid #ff00ff !important;
-    }
-    
-    body.style-pixel {
-      background: #2d2d2d !important;
-      color: #ffffff !important;
-    }
-    body.style-pixel header {
-      background: #ff6b6b !important;
-    }
-    body.style-pixel .style-card {
-      background: #3d3d3d !important;
-      box-shadow: 4px 4px 0 #000000 !important;
-      border: 2px solid #000000 !important;
-      border-radius: 0 !important;
-    }
-    
-    body.style-genz {
-      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #48dbfb 50%, #ff9ff3 75%, #54a0ff 100%) !important;
-      color: #000000 !important;
-    }
-    body.style-genz header {
-      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%) !important;
-    }
-    body.style-genz .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 10px 30px rgba(255,107,107,0.3) !important;
-    }
-    
-    body.style-bento {
-      background: #f5f5f5 !important;
-      color: #1a1a1a !important;
-    }
-    body.style-bento header {
-      background: #1a1a1a !important;
-      color: #ffffff !important;
-    }
-    body.style-bento .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
-      border-radius: 12px !important;
-    }
-    
-    body.style-editorial {
-      background: #fafafa !important;
-      color: #1a1a1a !important;
-    }
-    body.style-editorial header {
-      background: #1a1a1a !important;
-    }
-    body.style-editorial .style-card {
-      background: #ffffff !important;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-      border: 1px solid #e5e5e5 !important;
-    }
-    
-    body.style-vintage {
-      background: #f5f5dc !important;
-      color: #4a3728 !important;
-    }
-    body.style-vintage header {
-      background: linear-gradient(135deg, #d4a574 0%, #8b7355 100%) !important;
-    }
-    body.style-vintage .style-card {
-      background: #faf0e6 !important;
-      box-shadow: 0 10px 20px rgba(139,115,85,0.2) !important;
-      border: 1px solid #d4a574 !important;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -329,169 +20,409 @@
   </header>
 
   <main class="gallery">
-    <!-- General Styles (49) -->
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop/400/300" alt="Minimalism" loading="lazy">
-        
-      </div>
+    <!-- General Styles (1-49) -->
+    <div class="style-card" data-category="general" data-style="minimalism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Minimalism" loading="lazy"></div>
       <h3>1. Minimalism & Swiss Style</h3>
       <p>极简主义与瑞士风格 - 企业应用、仪表板、文档</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropneumorphism1/400/300" alt="Neumorphism" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="neumorphism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=400&h=300&fit=crop" alt="Neumorphism" loading="lazy"></div>
       <h3>2. Neumorphism</h3>
       <p>新拟态 - 健康/养生应用、冥想平台</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropglassmorphism1/400/300" alt="Glassmorphism" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="glassmorphism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Glassmorphism" loading="lazy"></div>
       <h3>3. Glassmorphism</h3>
       <p>玻璃拟态 - 现代 SaaS、金融仪表板</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropbrutalism1/400/300" alt="Brutalism" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="brutalism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Brutalism" loading="lazy"></div>
       <h3>4. Brutalism</h3>
       <p>粗野主义 - 设计作品集、艺术项目</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop3dhyper1/400/300" alt="3D Hyperrealism" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="3d">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop" alt="3D" loading="lazy"></div>
       <h3>5. 3D & Hyperrealism</h3>
       <p>3D 与超写实 - 游戏、产品展示、沉浸式体验</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropvibrant1/400/300" alt="Vibrant" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="vibrant">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Vibrant" loading="lazy"></div>
       <h3>6. Vibrant & Block-based</h3>
       <p>鲜艳色块 - 初创公司、创意机构、游戏</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropdarkmode1/400/300" alt="Dark Mode" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="dark">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="Dark" loading="lazy"></div>
       <h3>7. Dark Mode (OLED)</h3>
       <p>深色模式 - 夜间应用、编程平台</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropaccessible1/400/300" alt="Accessible" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="accessible">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop" alt="Accessible" loading="lazy"></div>
       <h3>8. Accessible & Ethical</h3>
       <p>无障碍与伦理设计 - 政府、医疗、教育</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropclay1/400/300" alt="Claymorphism" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="claymorphism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop" alt="Claymorphism" loading="lazy"></div>
       <h3>9. Claymorphism</h3>
       <p>粘土拟态 - 教育应用、儿童应用、SaaS</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropaurora1/400/300" alt="Aurora" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="aurora">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=400&h=300&fit=crop" alt="Aurora" loading="lazy"></div>
       <h3>10. Aurora UI</h3>
       <p>极光 UI - 现代 SaaS、创意机构</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropretro1/400/300" alt="Retro" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="retro">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Retro" loading="lazy"></div>
       <h3>11. Retro-Futurism</h3>
       <p>复古未来主义 - 游戏、娱乐、音乐平台</p>
     </div>
 
-    <div class="style-card" data-category="general">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropflat1/400/300" alt="Flat" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="flat">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Flat" loading="lazy"></div>
       <h3>12. Flat Design</h3>
       <p>扁平设计 - Web 应用、移动应用、初创 MVP</p>
     </div>
 
-    <!-- Landing Page Styles (8) -->
-    <div class="style-card" data-category="landing">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crophero1/400/300" alt="Hero" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="general" data-style="skeuomorphism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop" alt="Skeuomorphism" loading="lazy"></div>
+      <h3>13. Skeuomorphism</h3>
+      <p>拟物化设计 - 传统应用、游戏、高端产品</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="liquid-glass">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400&h=300&fit=crop" alt="Liquid Glass" loading="lazy"></div>
+      <h3>14. Liquid Glass</h3>
+      <p>液态玻璃 - 高端 SaaS、电商</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="motion">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Motion" loading="lazy"></div>
+      <h3>15. Motion-Driven</h3>
+      <p>动效驱动 - 作品集、故事讲述平台</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="micro">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop" alt="Micro" loading="lazy"></div>
+      <h3>16. Micro-interactions</h3>
+      <p>微交互 - 移动应用、触屏界面</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="inclusive">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop" alt="Inclusive" loading="lazy"></div>
+      <h3>17. Inclusive Design</h3>
+      <p>包容性设计 - 公共服务、教育、医疗</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="zero">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="Zero" loading="lazy"></div>
+      <h3>18. Zero Interface</h3>
+      <p>零界面 - 语音助手、AI 平台</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="soft">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=400&h=300&fit=crop" alt="Soft" loading="lazy"></div>
+      <h3>19. Soft UI Evolution</h3>
+      <p>软 UI 进化版 - 现代企业应用、SaaS</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="neubrutalism">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Neubrutalism" loading="lazy"></div>
+      <h3>20. Neubrutalism</h3>
+      <p>新粗野主义 - Gen Z 品牌、初创、Figma 风格</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="bento">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Bento" loading="lazy"></div>
+      <h3>21. Bento Box Grid</h3>
+      <p>便当盒网格 - 仪表板、产品页、作品集</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="y2k">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Y2K" loading="lazy"></div>
+      <h3>22. Y2K Aesthetic</h3>
+      <p>Y2K 美学 - 时尚品牌、音乐、Gen Z</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="cyberpunk">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=400&h=300&fit=crop" alt="Cyberpunk" loading="lazy"></div>
+      <h3>23. Cyberpunk UI</h3>
+      <p>赛博朋克 - 游戏、科技产品、加密应用</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="organic">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1518173946687-a4c036bc3c95?w=400&h=300&fit=crop" alt="Organic" loading="lazy"></div>
+      <h3>24. Organic Biophilic</h3>
+      <p>有机亲生物 - 健康应用、可持续品牌</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="ai">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop" alt="AI" loading="lazy"></div>
+      <h3>25. AI-Native UI</h3>
+      <p>AI 原生界面 - AI 产品、聊天机器人、助手</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="memphis">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Memphis" loading="lazy"></div>
+      <h3>26. Memphis Design</h3>
+      <p>孟菲斯设计 - 创意机构、音乐、青年品牌</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="vaporwave">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Vaporwave" loading="lazy"></div>
+      <h3>27. Vaporwave</h3>
+      <p>蒸汽波 - 音乐平台、游戏、作品集</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="dimensional">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop" alt="Dimensional" loading="lazy"></div>
+      <h3>28. Dimensional Layering</h3>
+      <p>维度分层 - 仪表板、卡片布局、模态框</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="exaggerated">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Exaggerated" loading="lazy"></div>
+      <h3>29. Exaggerated Minimalism</h3>
+      <p>夸张极简 - 时尚、建筑、作品集</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="kinetic">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Kinetic" loading="lazy"></div>
+      <h3>30. Kinetic Typography</h3>
+      <p>动态字体 - 首屏区域、营销网站</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="parallax">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Parallax" loading="lazy"></div>
+      <h3>31. Parallax Storytelling</h3>
+      <p>视差叙事 - 品牌故事、产品发布</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="swiss">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Swiss" loading="lazy"></div>
+      <h3>32. Swiss Modernism 2.0</h3>
+      <p>瑞士现代主义 2.0 - 企业网站、建筑、编辑</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="hud">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=400&h=300&fit=crop" alt="HUD" loading="lazy"></div>
+      <h3>33. HUD / Sci-Fi FUI</h3>
+      <p>平视显示/科幻 FUI - 科幻游戏、太空科技、网络安全</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="pixel">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Pixel" loading="lazy"></div>
+      <h3>34. Pixel Art</h3>
+      <p>像素艺术 - 独立游戏、复古工具、创意</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="bento-grids">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Bento Grids" loading="lazy"></div>
+      <h3>35. Bento Grids</h3>
+      <p>便当网格 - 产品特性、仪表板、个人页</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="spatial">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop" alt="Spatial" loading="lazy"></div>
+      <h3>36. Spatial UI (VisionOS)</h3>
+      <p>空间 UI - 空间计算应用、VR/AR</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="eink">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="E-Ink" loading="lazy"></div>
+      <h3>37. E-Ink / Paper</h3>
+      <p>电子墨水/纸张 - 阅读应用、数字报纸</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="genz">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Gen Z" loading="lazy"></div>
+      <h3>38. Gen Z Chaos / Maximalism</h3>
+      <p>Gen Z 混乱/极繁主义 - Gen Z 生活方式、音乐艺术家</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="biomimetic">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1518173946687-a4c036bc3c95?w=400&h=300&fit=crop" alt="Biomimetic" loading="lazy"></div>
+      <h3>39. Biomimetic / Organic 2.0</h3>
+      <p>仿生/有机 2.0 - 可持续科技、生物科技、健康</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="anti">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Anti-Polish" loading="lazy"></div>
+      <h3>40. Anti-Polish / Raw</h3>
+      <p>反精致/原始 - 创意作品集、艺术家网站</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="tactile">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop" alt="Tactile" loading="lazy"></div>
+      <h3>41. Tactile Digital</h3>
+      <p>触感数字 - 现代移动应用、趣味品牌</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="nature">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1518173946687-a4c036bc3c95?w=400&h=300&fit=crop" alt="Nature" loading="lazy"></div>
+      <h3>42. Nature Distilled</h3>
+      <p>自然提炼 - 健康品牌、可持续产品</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="interactive-cursor">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Interactive Cursor" loading="lazy"></div>
+      <h3>43. Interactive Cursor</h3>
+      <p>交互式光标 - 创意作品集、交互式</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="voice">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop" alt="Voice" loading="lazy"></div>
+      <h3>44. Voice-First Multimodal</h3>
+      <p>语音优先多模态 - 语音助手、无障碍应用</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="3d-product">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop" alt="3D Product" loading="lazy"></div>
+      <h3>45. 3D Product Preview</h3>
+      <p>3D 产品预览 - 电商、家具、时尚</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="gradient-mesh">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400&h=300&fit=crop" alt="Gradient Mesh" loading="lazy"></div>
+      <h3>46. Gradient Mesh / Aurora</h3>
+      <p>渐变网格/极光进化 - 首屏区域、背景、创意</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="editorial">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Editorial" loading="lazy"></div>
+      <h3>47. Editorial Grid / Magazine</h3>
+      <p>编辑网格/杂志 - 新闻网站、博客、杂志</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="chromatic">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=400&h=300&fit=crop" alt="Chromatic" loading="lazy"></div>
+      <h3>48. Chromatic Aberration / RGB</h3>
+      <p>色差/RGB 分离 - 音乐平台、游戏、科技</p>
+    </div>
+
+    <div class="style-card" data-category="general" data-style="vintage">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1518173946687-a4c036bc3c95?w=400&h=300&fit=crop" alt="Vintage" loading="lazy"></div>
+      <h3>49. Vintage Analog / Retro Film</h3>
+      <p>复古模拟/胶片 - 摄影、音乐/黑胶品牌</p>
+    </div>
+
+    <!-- Landing Page Styles (50-57) -->
+    <div class="style-card" data-category="landing" data-style="hero">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Hero" loading="lazy"></div>
       <h3>50. Hero-Centric Design</h3>
       <p>首屏聚焦 - 具有强烈视觉识别度的产品</p>
     </div>
 
-    <div class="style-card" data-category="landing">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropconversion1/400/300" alt="Conversion" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="landing" data-style="conversion">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Conversion" loading="lazy"></div>
       <h3>51. Conversion-Optimized</h3>
       <p>转化优化 - 线索生成、销售页面</p>
     </div>
 
-    <div class="style-card" data-category="landing">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropfeature1/400/300" alt="Feature" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="landing" data-style="feature">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Feature" loading="lazy"></div>
       <h3>52. Feature-Rich Showcase</h3>
       <p>功能丰富展示 - SaaS、复杂产品</p>
     </div>
 
-    <div class="style-card" data-category="landing">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropminimal1/400/300" alt="Minimal" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="landing" data-style="minimal-direct">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Minimal Direct" loading="lazy"></div>
       <h3>53. Minimal & Direct</h3>
       <p>极简直接 - 简单产品、应用</p>
     </div>
 
-    <!-- Dashboard Styles (10) -->
-    <div class="style-card" data-category="dashboard">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropdatadense1/400/300" alt="Data Dense" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="landing" data-style="social">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop" alt="Social" loading="lazy"></div>
+      <h3>54. Social Proof-Focused</h3>
+      <p>社交证明聚焦 - 服务、B2C 产品</p>
+    </div>
+
+    <div class="style-card" data-category="landing" data-style="interactive-product">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop" alt="Interactive Product" loading="lazy"></div>
+      <h3>55. Interactive Product Demo</h3>
+      <p>交互式产品演示 - 软件、工具</p>
+    </div>
+
+    <div class="style-card" data-category="landing" data-style="trust">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop" alt="Trust" loading="lazy"></div>
+      <h3>56. Trust & Authority</h3>
+      <p>信任与权威 - B2B、企业、咨询</p>
+    </div>
+
+    <div class="style-card" data-category="landing" data-style="storytelling">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop" alt="Storytelling" loading="lazy"></div>
+      <h3>57. Storytelling-Driven</h3>
+      <p>叙事驱动 - 品牌、机构、非营利组织</p>
+    </div>
+
+    <!-- Dashboard Styles (58-67) -->
+    <div class="style-card" data-category="dashboard" data-style="data-dense">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Data Dense" loading="lazy"></div>
       <h3>58. Data-Dense Dashboard</h3>
       <p>高密度数据 - 复杂数据分析</p>
     </div>
 
-    <div class="style-card" data-category="dashboard">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=cropheatmap1/400/300" alt="Heatmap" loading="lazy">
-        
-      </div>
+    <div class="style-card" data-category="dashboard" data-style="heatmap">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Heatmap" loading="lazy"></div>
       <h3>59. Heat Map Style</h3>
       <p>热力图风格 - 地理/行为数据</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="executive">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400&h=300&fit=crop" alt="Executive" loading="lazy"></div>
+      <h3>60. Executive Dashboard</h3>
+      <p>高管仪表板 - C 级摘要</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="realtime">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=400&h=300&fit=crop" alt="Realtime" loading="lazy"></div>
+      <h3>61. Real-Time Monitoring</h3>
+      <p>实时监控 - 运营、DevOps</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="drilldown">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop" alt="Drilldown" loading="lazy"></div>
+      <h3>62. Drill-Down Analytics</h3>
+      <p>钻取分析 - 详细探索</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="comparative">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Comparative" loading="lazy"></div>
+      <h3>63. Comparative Analysis</h3>
+      <p>对比分析 - 并排比较</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="predictive">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop" alt="Predictive" loading="lazy"></div>
+      <h3>64. Predictive Analytics</h3>
+      <p>预测分析 - 预测、ML 洞察</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="behavior">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop" alt="Behavior" loading="lazy"></div>
+      <h3>65. User Behavior Analytics</h3>
+      <p>用户行为分析 - UX 研究、产品分析</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="financial">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop" alt="Financial" loading="lazy"></div>
+      <h3>66. Financial Dashboard</h3>
+      <p>财务仪表板 - 金融、会计</p>
+    </div>
+
+    <div class="style-card" data-category="dashboard" data-style="sales">
+      <div class="image-container"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&h=300&fit=crop" alt="Sales" loading="lazy"></div>
+      <h3>67. Sales Intelligence</h3>
+      <p>销售智能 - 销售团队、CRM</p>
     </div>
   </main>
 
