@@ -54,12 +54,14 @@ header {
 
 /* Title Flip Animation */
 .title-flip {
-  font-size: 4rem;
-  margin-bottom: 10px;
-  font-weight: 300;
-  letter-spacing: 0.3em;
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
   display: inline-flex;
   overflow: hidden;
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  text-transform: lowercase;
 }
 
 .title-letter {
