@@ -886,6 +886,1134 @@ html {
   background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.5) 100%);
 }
 
+/* ============================================
+   GENERAL STYLES - UNIQUE CSS PATTERNS
+   ============================================ */
+
+/* 1. Minimalism & Swiss Style */
+.style-card[data-style="minimalism"] .image-container {
+  background: #ffffff;
+  position: relative;
+}
+.style-card[data-style="minimalism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(0deg, transparent, transparent 18px, #000 19px);
+}
+.style-card[data-style="minimalism"] .image-container::after {
+  content: '□';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #000;
+}
+
+/* 2. Neumorphism */
+.style-card[data-style="neumorphism"] .image-container {
+  background: #e0e5ec;
+  position: relative;
+}
+.style-card[data-style="neumorphism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #e0e5ec;
+  border-radius: 20px;
+  box-shadow: 
+    8px 8px 16px rgba(163,177,198,0.6),
+    -8px -8px 16px rgba(255,255,255,0.5);
+}
+
+/* 3. Glassmorphism */
+.style-card[data-style="glassmorphism"] .image-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+.style-card[data-style="glassmorphism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 4. Brutalism */
+.style-card[data-style="brutalism"] .image-container {
+  background: #ff6b6b;
+  position: relative;
+}
+.style-card[data-style="brutalism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 60%;
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  transform: rotate(-2deg);
+}
+
+/* 5. 3D & Hyperrealism */
+.style-card[data-style="3d"] .image-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  perspective: 1000px;
+}
+.style-card[data-style="3d"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: rotateX(15deg) rotateY(-10deg);
+}
+
+/* 6. Vibrant & Block-based */
+.style-card[data-style="vibrant"] .image-container {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+  position: relative;
+}
+.style-card[data-style="vibrant"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  height: 30%;
+  background: #ff6b6b;
+}
+.style-card[data-style="vibrant"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 30%;
+  height: 30%;
+  background: #feca57;
+}
+
+/* 7. Dark Mode (OLED) */
+.style-card[data-style="dark"] .image-container {
+  background: #000;
+  position: relative;
+}
+.style-card[data-style="dark"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* 8. Accessible & Ethical */
+.style-card[data-style="accessible"] .image-container {
+  background: #fff;
+  position: relative;
+}
+.style-card[data-style="accessible"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 30%;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 8px;
+}
+.style-card[data-style="accessible"] .image-container::after {
+  content: '♿';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+}
+
+/* 9. Claymorphism */
+.style-card[data-style="claymorphism"] .image-container {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  position: relative;
+}
+.style-card[data-style="claymorphism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: #f8fafc;
+  border-radius: 30px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.1),
+    inset 0 -4px 8px rgba(0,0,0,0.05);
+}
+
+/* 10. Aurora UI */
+.style-card[data-style="aurora"] .image-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  position: relative;
+  overflow: hidden;
+}
+.style-card[data-style="aurora"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, rgba(240,147,251,0.4) 0%, transparent 50%);
+  animation: aurora 8s ease-in-out infinite;
+}
+@keyframes aurora {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-5%, 5%) rotate(5deg); }
+}
+
+/* 11. Retro-Futurism */
+.style-card[data-style="retro"] .image-container {
+  background: linear-gradient(180deg, #2d1b4e 0%, #1a0b2e 100%);
+  position: relative;
+}
+.style-card[data-style="retro"] .image-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, transparent 0%, rgba(255,0,255,0.3) 100%);
+}
+.style-card[data-style="retro"] .image-container::after {
+  content: '🌅';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+}
+
+/* 12. Flat Design */
+.style-card[data-style="flat"] .image-container {
+  background: #ecf0f1;
+  position: relative;
+}
+.style-card[data-style="flat"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 25%;
+  height: 25%;
+  background: #3498db;
+  border-radius: 50%;
+}
+.style-card[data-style="flat"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  width: 25%;
+  height: 25%;
+  background: #e74c3c;
+  border-radius: 4px;
+}
+
+/* 13. Skeuomorphism */
+.style-card[data-style="skeuomorphism"] .image-container {
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+  position: relative;
+}
+.style-card[data-style="skeuomorphism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border-radius: 8px;
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.2),
+    inset 0 2px 4px rgba(255,255,255,0.5);
+  border: 1px solid #999;
+}
+
+/* 14. Liquid Glass */
+.style-card[data-style="liquid-glass"] .image-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+}
+.style-card[data-style="liquid-glass"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 15. Motion-Driven */
+.style-card[data-style="motion"] .image-container {
+  background: #0f0f23;
+  position: relative;
+}
+.style-card[data-style="motion"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 20%;
+  height: 20%;
+  background: #ff6b6b;
+  border-radius: 50%;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* 16. Micro-interactions */
+.style-card[data-style="micro"] .image-container {
+  background: #f7fafc;
+  position: relative;
+}
+.style-card[data-style="micro"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  width: 40%;
+  height: 10%;
+  background: #4299e1;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+/* 17. Inclusive Design */
+.style-card[data-style="inclusive"] .image-container {
+  background: #fff;
+  position: relative;
+}
+.style-card[data-style="inclusive"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  border: 4px solid #2b6cb0;
+  border-radius: 12px;
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(43,108,176,0.1) 10px, rgba(43,108,176,0.1) 20px);
+}
+
+/* 18. Zero Interface */
+.style-card[data-style="zero"] .image-container {
+  background: #000;
+  position: relative;
+}
+.style-card[data-style="zero"] .image-container::before {
+  content: '>_';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+/* 19. Soft UI Evolution */
+.style-card[data-style="soft"] .image-container {
+  background: #f8f9fa;
+  position: relative;
+}
+.style-card[data-style="soft"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 20. Neubrutalism */
+.style-card[data-style="neubrutalism"] .image-container {
+  background: #ffe156;
+  position: relative;
+}
+.style-card[data-style="neubrutalism"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  width: 70%;
+  height: 50%;
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  border-radius: 0;
+  transform: rotate(1deg);
+}
+
+/* 21. Bento Box Grid */
+.style-card[data-style="bento"] .image-container {
+  background: #f5f5f5;
+  position: relative;
+}
+.style-card[data-style="bento"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 35%;
+  height: 35%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.style-card[data-style="bento"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  width: 35%;
+  height: 55%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 22. Y2K Aesthetic */
+.style-card[data-style="y2k"] .image-container {
+  background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
+  position: relative;
+}
+.style-card[data-style="y2k"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255,0,255,0.3);
+  transform: rotate(-3deg);
+}
+
+/* 23. Cyberpunk UI */
+.style-card[data-style="cyberpunk"] .image-container {
+  background: #0a0a0f;
+  position: relative;
+}
+.style-card[data-style="cyberpunk"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  height: 40%;
+  background: #1a1a2e;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+/* 24. Organic Biophilic */
+.style-card[data-style="organic"] .image-container {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  position: relative;
+}
+.style-card[data-style="organic"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 25. AI-Native UI */
+.style-card[data-style="ai"] .image-container {
+  background: #0f0f1a;
+  position: relative;
+}
+.style-card[data-style="ai"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #1e1b4b;
+  border: 1px solid #7c3aed;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(124,58,237,0.3);
+}
+
+/* 26. Memphis Design */
+.style-card[data-style="memphis"] .image-container {
+  background: #fff;
+  position: relative;
+}
+.style-card[data-style="memphis"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  width: 60px;
+  height: 60px;
+  background: #ff6b6b;
+  border: 4px solid #2d3436;
+  border-radius: 50%;
+}
+.style-card[data-style="memphis"] .image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 80px;
+  height: 40px;
+  background: #48dbfb;
+  border: 4px solid #2d3436;
+  border-radius: 0;
+  transform: rotate(-15deg);
+}
+
+/* 27. Vaporwave */
+.style-card[data-style="vaporwave"] .image-container {
+  background: linear-gradient(180deg, #2d1b4e 0%, #1a0b2e 100%);
+  position: relative;
+}
+.style-card[data-style="vaporwave"] .image-container::before {
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255,0,255,0.3) 0%, transparent 100%);
+  border-top: 2px solid #ff00ff;
+}
+
+/* 28. Dimensional Layering */
+.style-card[data-style="dimensional"] .image-container {
+  background: #f7fafc;
+  position: relative;
+}
+.style-card[data-style="dimensional"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  width: 40%;
+  height: 30%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.1),
+    0 10px 30px rgba(0,0,0,0.1),
+    0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 29. Exaggerated Minimalism */
+.style-card[data-style="exaggerated"] .image-container {
+  background: #fff;
+  position: relative;
+}
+.style-card[data-style="exaggerated"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 20px 20px 0 #000;
+}
+
+/* 30. Kinetic Typography */
+.style-card[data-style="kinetic"] .image-container {
+  background: #0a0a0f;
+  position: relative;
+}
+.style-card[data-style="kinetic"] .image-container::before {
+  content: 'Aa';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: #fff;
+  font-weight: bold;
+  animation: letterSpacing 2s ease-in-out infinite;
+}
+@keyframes letterSpacing {
+  0%, 100% { letter-spacing: 0; }
+  50% { letter-spacing: 20px; }
+}
+
+/* 31. Parallax Storytelling */
+.style-card[data-style="parallax"] .image-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+.style-card[data-style="parallax"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  height: 60%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+}
+.style-card[data-style="parallax"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 30%;
+  height: 60%;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+/* 32. Swiss Modernism 2.0 */
+.style-card[data-style="swiss"] .image-container {
+  background: #fff;
+  position: relative;
+}
+.style-card[data-style="swiss"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(0deg, transparent, transparent 19px, #000 20px);
+}
+
+/* 33. HUD / Sci-Fi FUI */
+.style-card[data-style="hud"] .image-container {
+  background: #001100;
+  position: relative;
+}
+.style-card[data-style="hud"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,255,0,0.3);
+}
+.style-card[data-style="hud"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  border: 1px solid #00ff00;
+  border-radius: 50%;
+}
+
+/* 34. Pixel Art */
+.style-card[data-style="pixel"] .image-container {
+  background: #2d2d2d;
+  position: relative;
+}
+.style-card[data-style="pixel"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  background: #ff6b6b;
+  box-shadow: 
+    20px 0 0 #ff6b6b,
+    -20px 0 0 #ff6b6b,
+    0 20px 0 #ff6b6b,
+    0 -20px 0 #ff6b6b;
+}
+
+/* 35. Bento Grids */
+.style-card[data-style="bento-grids"] .image-container {
+  background: #f5f5f5;
+  position: relative;
+}
+.style-card[data-style="bento-grids"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 25%;
+  height: 25%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.style-card[data-style="bento-grids"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  width: 40%;
+  height: 60%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 36. Spatial UI */
+.style-card[data-style="spatial"] .image-container {
+  background: #000;
+  position: relative;
+  perspective: 1000px;
+}
+.style-card[data-style="spatial"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: #1a1a1a;
+  border-radius: 12px;
+  transform: rotateX(20deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* 37. E-Ink / Paper */
+.style-card[data-style="eink"] .image-container {
+  background: #f5f5dc;
+  position: relative;
+}
+.style-card[data-style="eink"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 38. Gen Z Chaos */
+.style-card[data-style="genz"] .image-container {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 25%, #48dbfb 50%, #ff9ff3 75%, #54a0ff 100%);
+  position: relative;
+}
+.style-card[data-style="genz"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: #fff;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+}
+
+/* 39. Biomimetic */
+.style-card[data-style="biomimetic"] .image-container {
+  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+  position: relative;
+}
+.style-card[data-style="biomimetic"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 70% 30% 50% 50% / 50% 50% 30% 70%;
+  box-shadow: 0 10px 30px rgba(168,230,207,0.3);
+}
+
+/* 40. Anti-Polish / Raw */
+.style-card[data-style="anti"] .image-container {
+  background: #f0f0f0;
+  position: relative;
+}
+.style-card[data-style="anti"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  height: 40%;
+  background: #e0e0e0;
+  border: 1px solid #000;
+}
+
+/* 41. Tactile Digital */
+.style-card[data-style="tactile"] .image-container {
+  background: #f5f5f5;
+  position: relative;
+}
+.style-card[data-style="tactile"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* 42. Nature Distilled */
+.style-card[data-style="nature"] .image-container {
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  position: relative;
+}
+.style-card[data-style="nature"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(86,171,47,0.2);
+}
+
+/* 43. Interactive Cursor */
+.style-card[data-style="interactive-cursor"] .image-container {
+  background: #0a0a0f;
+  position: relative;
+}
+.style-card[data-style="interactive-cursor"] .image-container::before {
+  content: '○';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #fff;
+}
+
+/* 44. Voice-First */
+.style-card[data-style="voice"] .image-container {
+  background: #1a1a2e;
+  position: relative;
+}
+.style-card[data-style="voice"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 20%;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+  border-radius: 20px;
+}
+
+/* 45. 3D Product Preview */
+.style-card[data-style="3d-product"] .image-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+}
+.style-card[data-style="3d-product"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transform: rotateX(15deg);
+}
+
+/* 46. Gradient Mesh */
+.style-card[data-style="gradient-mesh"] .image-container {
+  background: linear-gradient(135deg, #ff00cc 0%, #333399 50%, #00ccff 100%);
+  position: relative;
+  overflow: hidden;
+}
+.style-card[data-style="gradient-mesh"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(0,204,255,0.4) 0%, transparent 50%);
+  animation: meshMove 10s ease-in-out infinite;
+}
+@keyframes meshMove {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10%, 10%); }
+}
+
+/* 47. Editorial Grid */
+.style-card[data-style="editorial"] .image-container {
+  background: #fafafa;
+  position: relative;
+}
+.style-card[data-style="editorial"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  border: 1px solid #e5e5e5;
+  background: 
+    linear-gradient(90deg, transparent 49%, #e5e5e5 50%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, #e5e5e5 50%, transparent 51%);
+  background-size: 33% 33%;
+}
+
+/* 48. Chromatic Aberration */
+.style-card[data-style="chromatic"] .image-container {
+  background: #0a0a0f;
+  position: relative;
+}
+.style-card[data-style="chromatic"] .image-container::before {
+  content: 'RGB';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+    -3px 0 #ff0000,
+    3px 0 #00ffff;
+}
+
+/* 49. Vintage Analog */
+.style-card[data-style="vintage"] .image-container {
+  background: #f5f5dc;
+  position: relative;
+}
+.style-card[data-style="vintage"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: #faf0e6;
+  border: 1px solid #d4a574;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(139,115,85,0.2);
+}
+
+/* Hide original images for general styles */
+.style-card[data-category="general"] .image-container img {
+  display: none;
+}
+
+/* Landing Page Styles */
+.style-card[data-category="landing"] .image-container img {
+  display: none;
+}
+
+/* 50. Hero-Centric Design */
+.style-card[data-style="hero"] .image-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+.style-card[data-style="hero"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+/* 51. Conversion-Optimized */
+.style-card[data-style="conversion"] .image-container {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  position: relative;
+}
+.style-card[data-style="conversion"] .image-container::before {
+  content: '';
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+  width: 50%;
+  height: 15%;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* 52. Feature-Rich Showcase */
+.style-card[data-style="feature"] .image-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+.style-card[data-style="feature"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 25%;
+  height: 25%;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.style-card[data-style="feature"] .image-container::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  width: 25%;
+  height: 25%;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 53. Minimal & Direct */
+.style-card[data-style="minimal-direct"] .image-container {
+  background: #ffffff;
+  position: relative;
+}
+.style-card[data-style="minimal-direct"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 20%;
+  background: #000;
+}
+
+/* 54. Social Proof-Focused */
+.style-card[data-style="social"] .image-container {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  position: relative;
+}
+.style-card[data-style="social"] .image-container::before {
+  content: '★★★★★';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #ffd700;
+  letter-spacing: 5px;
+}
+
+/* 55. Interactive Product Demo */
+.style-card[data-style="interactive-product"] .image-container {
+  background: linear-gradient(135deg, #1a1a3e 0%, #0f0f23 100%);
+  position: relative;
+}
+.style-card[data-style="interactive-product"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: rgba(255,107,107,0.2);
+  border-radius: 12px;
+  border: 2px solid rgba(255,107,107,0.5);
+}
+
+/* 56. Trust & Authority */
+.style-card[data-style="trust"] .image-container {
+  background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+  position: relative;
+}
+.style-card[data-style="trust"] .image-container::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 57. Storytelling-Driven */
+.style-card[data-style="storytelling"] .image-container {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  position: relative;
+}
+.style-card[data-style="storytelling"] .image-container::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header h1 {
